@@ -19,7 +19,6 @@ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O 
 ```
 ## customize zshrc
 - customize `~/.zshrc` template created by `oh-my-zsh`
-- mine: 
 
 ## plugins
 ### zsh-syntax-highlighting
@@ -35,5 +34,3 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 ## sources
 - https://github.com/thomasjpfan/dotfiles
-
--
