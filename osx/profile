@@ -1,0 +1,29 @@
+#aliases
+alias cl='clear'
+
+# mapping to linux equivalents
+alias xclip='pbcopy'
+alias md5sum='md5'
+
+##### functions
+function fcheck(){
+    awk 'BEGIN{FS="\t"}{print NF}' $1|uniq
+}
+
+function nh(){
+    head -1 $1|awk 'BEGIN{FS=OFS="\t"}{for(i=1;i<=NF;i++)print i"\t"$i}'
+}
+
+function count(){
+    cut -f 1 $1|sort|uniq -c|pretty|sort -k1,1nr
+}
+
+
+# gnu-utils
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+alias sed="/usr/local/bin/gsed"
+
+# export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="/opt/conda/bin/conda:$PATH"
+# eval "$(pyenv init --path)"
